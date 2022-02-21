@@ -1,0 +1,18 @@
+create table tipoSensor (id int auto_increment primary key,nome varchar (30));
+desc table tipoSensor;
+insert into tipoSensor(id,nome) values('1','chuva');
+insert into tipoSensor values('2','temperauta');
+insert into tipoSensor values('3','pressão');
+insert into tipoSensor values('4','humidade');
+select * from tiposensor;
+
+create table sensores (id int not null, idTipoSensor int not null Primary key, coordenadas  varchar (100), numSerie int);
+desc sensores;
+select* from sensores;
+insert into sensores(id,idTipoSensor,coordenadas,numSerie) 
+values('10','4','35° 52'' 14" S 11° 10'' 01" W','235');
+
+create table logsensores(id int not null Primary key auto_increment ,dataHora datetime,idSensor int, valor double);
+insert into logsensores values ('6','2021-09-05 12:15', '4','90.8');
+
+
